@@ -1,9 +1,9 @@
 import React from 'react';
 import {Text, Touchable, TouchableOpacity, View} from 'react-native';
 
-function Button({backgroundColor, color, children}) {
+function Button({onPress, backgroundColor, color, children}) {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={onPress}>
       <View style={ButtonStyle(backgroundColor, color)}>
         <Text
           style={{color: color, fontFamily: 'Quicksand-Bold', fontSize: 18}}>

@@ -10,7 +10,7 @@ import {
   PasswordIcon,
   UserIcon,
 } from '../../theme/Icons';
-function Login() {
+function Login({navigation}) {
   return (
     <View
       style={{
@@ -49,7 +49,10 @@ function Login() {
                 flexDirection: 'column',
                 alignItems: 'center',
               }}>
-              <Button backgroundColor="#5B259F" color="#ffff">
+              <Button
+                onPress={() => navigation.navigate('Home')}
+                backgroundColor="#5B259F"
+                color="#ffff">
                 Login
               </Button>
               <Text style={{textAlign: 'center', marginTop: 10}}>
