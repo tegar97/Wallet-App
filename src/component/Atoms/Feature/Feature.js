@@ -1,10 +1,9 @@
 import React from 'react';
 import {StyleSheet, TouchableOpacity, View, Text} from 'react-native';
-import {TransferIcon} from '../../../theme/Icons';
 
 function FeatureBox({text = 'Transfer', children}) {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity activeOpacity={0.8}>
       <View style={styles.FeatureContainer}>
         <View style={styles.FeatureBox}>{children}</View>
         <View>

@@ -13,6 +13,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Signup} from './screens';
 import Login from './screens/Auth/Login';
 import Home from './screens/Main/Home';
+import DetailCard from './screens/Main/Card/DetailCard';
 
 const Stack = createNativeStackNavigator();
 
@@ -33,6 +34,11 @@ const App = () => {
         <Stack.Screen
           name="Home"
           component={Home}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="DetailCard"
+          component={DetailCard}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

@@ -10,22 +10,31 @@ function Views({
   paddingTop = 0,
   paddingBottom = 0,
   background = COLORS.white,
+  position = 'relative',
   children,
 }) {
   if (scroll == true) {
     return (
-      <ScrollView>
-        <View
-          style={BaseViews(
-            paddingLeft,
-            paddingRight,
-            paddingTop,
-            paddingBottom,
-            background,
-          )}>
-          {children}
-        </View>
-      </ScrollView>
+      <View
+        style={{
+          backgroundColor: background,
+          height: '100%',
+          display: 'flex',
+        }}>
+        <ScrollView>
+          <View
+            style={BaseViews(
+              paddingLeft,
+              paddingRight,
+              paddingTop,
+              paddingBottom,
+              background,
+              position,
+            )}>
+            {children}
+          </View>
+        </ScrollView>
+      </View>
     );
   } else {
     return (
@@ -49,6 +58,7 @@ const BaseViews = function (
   paddingTop,
   paddingBottom,
   background,
+  position,
 ) {
   return {
     backgroundColor: background,
@@ -59,6 +69,7 @@ const BaseViews = function (
     paddingRight,
     paddingTop,
     paddingBottom,
+    position: 'relative',
   };
 };
 

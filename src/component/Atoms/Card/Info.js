@@ -1,32 +1,42 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  Touchable,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import {Circle, CircleBig, CircleWhite} from '../../../theme/Icons';
 
-function Info() {
+function Info({navigation}) {
   return (
-    <View style={styles.InfoCard}>
-      <Circle style={styles.Circle} />
-      <View
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          width: '100%',
-          justifyContent: 'space-around',
-          alignItems: 'center',
-          alignContent: 'center',
-          height: '100%',
-        }}>
-        <View>
-          <Text style={styles.Title}>Balance</Text>
-          <Text style={styles.subTitle}>$ 1.234</Text>
+    <TouchableOpacity
+      onPress={() => navigation.navigate('DetailCard')}
+      activeOpacity={0.8}>
+      <View style={styles.InfoCard}>
+        <Circle style={styles.Circle} />
+        <View
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            width: '100%',
+            justifyContent: 'space-around',
+            alignItems: 'center',
+            alignContent: 'center',
+            height: '100%',
+          }}>
+          <View>
+            <Text style={styles.Title}>Balance</Text>
+            <Text style={styles.subTitle}>$ 1.234</Text>
+          </View>
+          <View>
+            <Text style={styles.Title}>Card</Text>
+            <Text style={styles.subTitle}>Mabank</Text>
+          </View>
+          <CircleBig style={styles.CircleBigStyle} />
         </View>
-        <View>
-          <Text style={styles.Title}>Card</Text>
-          <Text style={styles.subTitle}>Mabank</Text>
-        </View>
-        <CircleBig style={styles.CircleBigStyle} />
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
