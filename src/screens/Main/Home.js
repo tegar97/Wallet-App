@@ -11,7 +11,7 @@ function Home({navigation}) {
     <Views
       paddingLeft={33}
       paddingRight={33}
-      paddingBottom={40}
+      paddingBottom={90}
       paddingTop={40}
       scroll={true}
       position="relative">
@@ -31,7 +31,9 @@ function Home({navigation}) {
         <Info navigation={navigation} />
       </View>
       <View style={styles.FeatureContainer}>
-        <FeatureBox text="Transfer">
+        <FeatureBox
+          onPress={() => navigation.navigate('Transfer')}
+          text="Transfer">
           <TransferIcon />
         </FeatureBox>
         <FeatureBox text="Payment">

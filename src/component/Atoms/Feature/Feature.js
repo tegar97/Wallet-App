@@ -1,9 +1,9 @@
 import React from 'react';
 import {StyleSheet, TouchableOpacity, View, Text} from 'react-native';
 
-function FeatureBox({text = 'Transfer', children}) {
+function FeatureBox({text = 'Transfer', onPress, children}) {
   return (
-    <TouchableOpacity activeOpacity={0.8}>
+    <TouchableOpacity activeOpacity={0.8} onPress={onPress}>
       <View style={styles.FeatureContainer}>
         <View style={styles.FeatureBox}>{children}</View>
         <View>
