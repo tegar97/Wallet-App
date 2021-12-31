@@ -38,7 +38,7 @@ function Login({navigation}) {
                 <UserIcon />
               </Input>
 
-              <Input placeholder="Password">
+              <Input type="password" placeholder="Password">
                 <PasswordIcon />
               </Input>
             </View>
@@ -50,7 +50,9 @@ function Login({navigation}) {
                 alignItems: 'center',
               }}>
               <Button
-                onPress={() => navigation.navigate('Home')}
+                onPress={() =>
+                  navigation.navigate('ScreemWithNavBottom', {screen: 'Home'})
+                }
                 backgroundColor="#5B259F"
                 color="#ffff">
                 Login

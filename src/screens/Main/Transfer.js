@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import HeaderBack from '../../component/Atoms/Header/HeaderBack';
 import Views from '../../component/Atoms/Base/Views';
-import {ArrowBottom} from '../../theme/Icons';
+import {ArrowBottom, ArrowLeft} from '../../theme/Icons';
 import VirtualKeyboard from '../../component/Atoms/VirtualKeyboard/VirtualKeyboard';
 
 function Transfer({navigation}) {
@@ -14,7 +14,16 @@ function Transfer({navigation}) {
       paddingBottom={40}
       paddingTop={40}
       scroll={true}>
-      <HeaderBack navigation={navigation} />
+      <View
+        style={{
+          flexDirection: 'row',
+          width: '100%',
+          justifyContent: 'space-between',
+        }}>
+        <HeaderBack navigation={navigation} />
+        <View>{amount.length >= 1 && <ArrowLeft />}</View>
+      </View>
+
       <View style={styles.moneyTransferContainer}>
         <Text style={styles.moneyTransfer}>${amount}</Text>
       </View>

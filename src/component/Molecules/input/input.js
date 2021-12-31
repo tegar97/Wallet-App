@@ -8,12 +8,16 @@ import {
 } from 'react-native';
 import {UserIcon} from '../../../theme/Icons';
 
-function Input({placeholder, children}) {
+function Input({placeholder, type, children}) {
   return (
     <View style={styles.inputContainer}>
       {children}
       <View style={{marginRight: 10}} />
-      <TextInput placeholder={placeholder} style={styles.Input} />
+      <TextInput
+        secureTextEntry={type === 'password' ? true : false}
+        placeholder={placeholder}
+        style={styles.Input}
+      />
     </View>
   );
 }

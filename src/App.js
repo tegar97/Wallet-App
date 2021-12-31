@@ -28,11 +28,9 @@ import Notification from './screens/Main/Notification/Notification';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 import {useRoute} from '@react-navigation/native';
+import Setting from './screens/Main/Settings/Setting';
 
-const ScreenWithNavBottom = ({navigation}) => {
-  const route = useRoute();
-
-  console.log('new', route);
+const ScreenWithNavBottom = () => {
   return (
     <Tab.Navigator
       screenOptions={{
@@ -88,7 +86,7 @@ const ScreenWithNavBottom = ({navigation}) => {
       />
       <Tab.Screen
         name="Setting"
-        component={Home}
+        component={Setting}
         options={{
           tabBarIcon: () => {
             return <SettingNotifyNonActive />;
@@ -101,7 +99,7 @@ const ScreenWithNavBottom = ({navigation}) => {
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName="Signup">
         <Stack.Screen
           name="ScreemWithNavBottom"
           component={ScreenWithNavBottom}
@@ -117,6 +115,7 @@ const App = () => {
           component={Login}
           options={{headerShown: false}}
         />
+
         <Stack.Screen
           name="DetailCard"
           component={DetailCard}

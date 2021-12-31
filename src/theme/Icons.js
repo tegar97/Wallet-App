@@ -20,6 +20,9 @@ import SettingNotifyNonActive from './../assets/icons/setting-nonActive.svg';
 import HomeActive from './../assets/icons/Gopay-Active.svg';
 import ArrowUp from './../assets/icons/Arrow-Top.svg';
 import ArrowDown from './../assets/icons/OutGoingTransaction.svg';
+import ArrowLeft from './../assets/icons/arrow-circle-left.svg';
+import ArrowRight from './../assets/icons/Arrow-Right.svg';
+import ProfileSettingIcon from './../assets/icons/profile-setting.svg';
 export {
   GoogleIcons,
   FacebookIcons,
@@ -43,4 +46,7 @@ export {
   HomeActive,
   ArrowUp,
   ArrowDown,
+  ArrowLeft,
+  ArrowRight,
+  ProfileSettingIcon,
 };
